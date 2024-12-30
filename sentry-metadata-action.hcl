@@ -8,6 +8,7 @@ variable "SENTRY_ORG" { default = "${GITHUB_REPOSITORY_OWNER}"}
 variable "SENTRY_AUTH_TOKEN" {}
 variable "SENTRY_AUTH_TOKEN_FILE" { default = "/run/secrets/SENTRY_AUTH_TOKEN" }
 
+# Target
 target "sentry-metadata-action" {
   secret = [
     "id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN",
