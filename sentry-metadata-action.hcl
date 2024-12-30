@@ -1,4 +1,4 @@
-variable "GITHUB_REPOSITORY_OWNER" {default = "owner"}
+variable "GITHUB_REPOSITORY_OWNER" { default = "owner" }
 
 # Variables
 variable "SENTRY_URL" { default = "https://sentry.io" }
