@@ -66,6 +66,9 @@ jobs:
       - name: Sentry meta
         id: sentry-meta
         uses: soramitsukhmer-lab/sentry-metadata-action@v1
+        with:
+          sentry_org: my-org
+          sentry_auth_token: ${{ secrets.SENTRY_AUTH_TOKEN }}
 
       - uses: docker/bake-action@v2
         with:
@@ -76,7 +79,18 @@ jobs:
           targets: build
 ```
 
-## Output
+## Inputs
+
+### `sentry_url` (optional)
+The URL of the Sentry instance. Default is `https://sentry.io`.
+
+### `sentry_org` (optional)
+The organization slug in Sentry. Default to GitHub repository owner.
+
+### `sentry_auth_token` (required)
+The Sentry auth token to authenticate with Sentry.
+
+## Outputs
 > Output of `docker buildx bake -f sentry-metadata-action.hcl --print sentry-metadata-action` command.
 
 ```json
