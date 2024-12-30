@@ -1,4 +1,5 @@
-variable "GITHUB_REPOSITORY_OWNER" { default = "owner" }
+# The repository owner's name. For example, 'octocat'.
+variable "GITHUB_REPOSITORY_OWNER" {}
 
 # Variables
 variable "SENTRY_URL" { default = "https://sentry.io" }
