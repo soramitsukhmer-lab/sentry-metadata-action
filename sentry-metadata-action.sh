@@ -25,5 +25,5 @@ echo "- bake-file = ${GITHUB_ACTION_PATH}/sentry-metadata-action.hcl"
 gh_group_end
 
 gh_group "Bake definition"
-docker buildx bake -f "${GITHUB_ACTION_PATH}/sentry-metadata-action.hcl" --print github-metadata-action
+docker buildx bake -f "${GITHUB_ACTION_PATH}/sentry-metadata-action.hcl" --print sentry-metadata-action
 gh_group_end
