@@ -10,9 +10,9 @@ gh_set_env() {
 }
 
 # Inputs
-SENTRY_URL=${$1:-${SENTRY_URL}}
-SENTRY_ORG=${$2:-${SENTRY_ORG}}
-SENTRY_AUTH_TOKEN=${$3:-${SENTRY_AUTH_TOKEN}}
+SENTRY_URL=${1:-${SENTRY_URL}}
+SENTRY_ORG=${2:-${SENTRY_ORG}}
+SENTRY_AUTH_TOKEN=${3:-${SENTRY_AUTH_TOKEN}}
 
 # Main
 gh_group "Processing GitHub context"

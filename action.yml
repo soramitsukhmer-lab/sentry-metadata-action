@@ -3,23 +3,21 @@ description: Sentry Metadata Action for Docker Buildx Bake.
 author: Soramitsu Khmer Labs
 
 branding:
-  color: white
-  icon: git-branch
+  color: red
+  icon: alert-triangle
 
 inputs:
-  token:
-    description: >
-      Personal access token (PAT) used to fetch the repository. The PAT is configured
-      with the local git config, which enables your scripts to run authenticated git
-      commands. The post-job step removes the PAT.
-
-
-      We recommend using a service account with the least permissions necessary.
-      Also when generating a new PAT, select the least scopes necessary.
-
-
-      [Learn more about creating and using encrypted secrets](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets)
-    default: ${{ github.token }}
+  sentry_url:
+    description: Sentry URL
+    default:  https://sentry.io
+    required: false
+  sentry_org:
+    description: Sentry Organization
+    default:  ${{ github.repository_owner }}
+    required: false
+  sentry_auth_token:
+    description: Sentry Auth Token
+    required: true
 
 outputs:
   bake-file:
@@ -33,5 +31,5 @@ runs:
       shell: bash
     - name: GitHub Metadata action
       id: meta
-      run: sentry-metadata-action.sh "${{ inputs.token }}"
+      run: sentry-metadata-action.sh "${{ inputs.sentry_url }}" "${{ inputs.sentry_org }}" "${{ inputs.sentry_auth_token }}"
       shell: bash
