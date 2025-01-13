@@ -82,7 +82,7 @@ jobs:
 ## Inputs
 
 ### `sentry_url` (optional)
-The URL of the Sentry instance. Default is `https://sentry.io`.
+The URL of the Sentry instance. Default is `https://sentry.sorakh.app`.
 
 ### `sentry_org` (optional)
 The organization slug in Sentry. Default to GitHub repository owner.
