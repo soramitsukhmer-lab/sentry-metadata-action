@@ -9,11 +9,11 @@ branding:
 inputs:
   sentry_url:
     description: Sentry URL
-    default:  https://sentry.io
+    default:  https://sentry.sorakh.app
     required: false
   sentry_org:
     description: Sentry Organization
-    default:  ${{ github.repository_owner }}
+    default:  soramitsukhmer
     required: false
   sentry_auth_token:
     description: Sentry Auth Token
