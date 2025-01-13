@@ -108,8 +108,8 @@ The Sentry auth token to authenticate with Sentry.
       "dockerfile": "Dockerfile",
       "args": {
         "SENTRY_AUTH_TOKEN_FILE": "/run/secrets/SENTRY_AUTH_TOKEN",
-        "SENTRY_ORG": "",
-        "SENTRY_URL": "https://sentry.io"
+        "SENTRY_ORG": "soramitsukhmer-lab",
+        "SENTRY_URL": "https://sentry.sorakh.app"
       },
       "secret": [
         "id=SENTRY_AUTH_TOKEN,env=SENTRY_AUTH_TOKEN"
