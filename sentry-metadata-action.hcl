@@ -2,7 +2,7 @@
 variable "GITHUB_REPOSITORY_OWNER" {}
 
 # Variables
-variable "SENTRY_URL" { default = "https://sentry.io" }
+variable "SENTRY_URL" { default = "https://sentry.sorakh.app" }
 variable "SENTRY_ORG" { default = "${GITHUB_REPOSITORY_OWNER}"}
 
 # Secrets
