@@ -27,9 +27,9 @@ outputs:
 runs:
   using: composite
   steps:
-    - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
-      shell: bash
     - name: GitHub Metadata action
       id: meta
-      run: sentry-metadata-action.sh "${{ inputs.sentry_url }}" "${{ inputs.sentry_org }}" "${{ inputs.sentry_auth_token }}"
+      run: |
+        # Sentry Metadata action
+        ${{ github.action_path }}/sentry-metadata-action.sh "${{ inputs.sentry_url }}" "${{ inputs.sentry_org }}" "${{ inputs.sentry_auth_token }}"
       shell: bash
